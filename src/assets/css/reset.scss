@@ -1,0 +1,131 @@
+@import './variables.scss';
+
+/* reset样式 */
+html,body,div,span,applet,object,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font:inherit;
+	font-weight:normal;
+  vertical-align:baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	display:block;
+}
+ol,ul,li {
+	list-style:none;
+}
+blockquote,q {
+	quotes:none;
+}
+blockquote:before,blockquote:after,q:before,q:after {
+	content:'';
+	content:none;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+th,td {
+	vertical-align:middle;
+}
+a {
+	outline:none;
+	text-decoration:none;
+	-webkit-backface-visibility:hidden;
+}
+a:focus {
+	outline:none;
+}
+input:focus,select:focus,textarea:focus {
+	outline:-webkit-focus-ring-color auto 0;
+}
+html, body {
+  height: 100%;
+  // user-select: none;
+}
+
+#app {
+  min-height: 100%;
+  font-size: 14PX;
+  line-height: 1.15;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  background: $content-bg;
+  > .el-container {
+    min-height: 100vh;
+    flex: 1;
+    > .el-main {
+      height: 100%;
+      padding: .0625rem 0.260417rem;
+    }
+  }
+  .el-header {
+    padding-left: 0;
+    padding-right: 0;
+    background: $header-bg;
+    overflow-x: auto;
+  }
+}
+
+/* 数字字体 */
+@font-face {
+  font-family: electronicFont;
+  src: url(../font/DS-DIGIT.TTF);
+}
+
+.map-bg {
+  margin: 0 -0.208333rem;
+  background: url('~@/assets/img/map-bg.png') no-repeat;
+  background-size: 100% 100%;
+}
+
+/* 约束屏幕尺寸 */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 100PX !important;
+  }
+}
+
+/* 美化滚动条 */
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(249, 250, 254, 1);
+  -webkit-border-radius: 0;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: #eee;
+  -webkit-border-radius: 6px;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+  border: 2px solid #fff;
+  filter: alpha(opacity = 50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+}
+::-webkit-scrollbar-thumb:hover {
+  height: 50px;
+  background-color: #878987;
+  -webkit-border-radius: 6px;
+}
+
+.el-dropdown-menu {
+  max-height: 300px;
+  overflow: auto;
+  .el-dropdown-menu__item.active {
+    background: #409eff;
+    color: #fff;
+  }
+}
+.dropdown-title.active {
+  color: #409eff;
+}
+
+

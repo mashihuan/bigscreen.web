@@ -1,0 +1,196 @@
+$header-bg: #111842;      // header背景
+$menu-active-bg: #292f55; // 导航选中背景
+$content-bg: #070b1f;     // 主内容背景
+
+// 图表四个角样式
+$cornerColor: #1F65EB;
+$cornerWidth: 1px;
+$cornerSize: 0.0625rem;
+
+.theme-dark {
+  #app {
+    // 背景
+    background: $content-bg !important;
+    > .el-container {
+      background: $content-bg !important;
+      > .el-header {
+        background: $header-bg !important;
+        .menu-item.active {
+          background: $menu-active-bg !important;
+        }
+      }
+    }
+    // 图表样式
+    .chart-wrapper {
+      border-radius: 0;
+      box-shadow: none;
+      background: linear-gradient(180deg,rgba(2,49,250,0),rgba(2,64,250,.2));
+        &:before, &:after {
+          position: absolute;
+          content: '';
+          width: $cornerSize;
+          height: $cornerSize;
+        }
+        &:before {
+          top: 0;
+          left: 0;
+          border-top: $cornerWidth solid $cornerColor;
+          border-left: $cornerWidth solid $cornerColor;
+        }
+        &:after {
+          top: 0;
+          right: 0;
+          border-top: $cornerWidth solid $cornerColor;
+          border-right: $cornerWidth solid $cornerColor;
+        }
+      .chart-inner {
+        .title {
+          padding-top: 0.078125rem;
+          padding-bottom: 0.026042rem;
+          color: #fff;
+          border-bottom: none;
+        }
+        &:before, &:after {
+          position: absolute;
+          content: '';
+          width: $cornerSize;
+          height: $cornerSize;
+        }
+        &:before {
+          bottom: 0;
+          left: 0;
+          border-bottom: $cornerWidth solid $cornerColor;
+          border-left: $cornerWidth solid $cornerColor;
+        }
+        &:after {
+          bottom: 0;
+          right: 0;
+          border-bottom: $cornerWidth solid $cornerColor;
+          border-right: $cornerWidth solid $cornerColor;
+        }
+      }
+
+    }
+    // loading颜色
+    .spinner > div {
+      background: #fff;
+    }
+    // header右侧下拉样式
+    .el-dropdown-menu {
+      background: $header-bg;
+    }
+
+    // 表格样式
+    .panel {
+      .el-table, .dropdown-title {
+        color: #fff;
+      }
+      .el-card__header .title {
+        color: #1F65EB;
+      }
+      .el-table th {
+        background: #1A2457;
+        color: #fff;
+      }
+      .el-table__row:nth-child(odd) {
+        background: #0F1740;
+      }
+      .el-table__row:nth-child(even) {
+        background: #1A2457;
+      }
+    }
+    // 列表页样式
+    .panel-list {
+      background: #111842;
+    }
+    .card-list {
+      .item-wrap:nth-child(odd) {
+        background: #1B2559 !important;
+        color: #fff !important;
+      }
+      .item-wrap:nth-child(even) {
+        background: #0F1740 !important;
+        color: #fff !important;
+      }
+    }
+    // 自然人机构图样式
+    .person-title {
+      font-size: 14px;
+      color: #B1E5FB;
+    }
+    // 法人机构图样式
+    .org-ouuter {
+      .org-inner {
+        background: #0F1740;
+      }
+    }
+    // 数据下钻弹窗样式
+    .drill-wrapper {
+      .title {
+        color: #1F65EB !important;
+      }
+    }
+    // 时间轴
+    .times.timeline {
+      .label {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+    // 大标题颜色
+    .banner-header {
+      color: #B1E5FB;
+    }
+    // 资产管理样式
+    .count-wrapper {
+      background: #111842;
+      color: #fff;
+    }
+    .assets-table {
+      // border: none;
+      border-color:  #23397D;
+      background: none;
+      color: #ccc;
+      &:before {
+        display: none;
+      }
+      th, .el-dropdown-selfdefine {
+        color: #fff;
+      }
+      th, tr, td {
+        border-color: #23397D;
+        background: none;
+      }
+      &.el-table--border::after, &.el-table--group::after, &.el-table::before {
+        background: none;
+      }
+    }
+    .asset-item {
+      background: #111842;
+      color: #fff;
+      .title {
+        background: none;
+      }
+    }
+    .info-basic {
+      color: #fff;
+      border: 1px solid #23397D;
+      .item {
+        border-bottom: 1px solid #23397D;
+        border-right: 1px solid #23397D;
+      }
+    }
+    // 短信弹窗
+    .el-dialog {
+      .el-table.assets-table {
+        border-color: #EBEEF5;
+        th, .el-dropdown-selfdefine, .cell {
+          color: #303133;
+        }
+        th, tr, td {
+          border-color: #EBEEF5;
+          background: none;
+        }
+      }
+    }
+  }
+}
